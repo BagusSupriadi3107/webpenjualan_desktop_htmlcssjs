@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account | JAVShop | Website E-commerce</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;1,100;1,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>   
+
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="product.html">Product</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="account.html">Account</a></li>
+                </ul>
+            </nav>
+            <a href="keranjang.html"><img src="image/logobag.png" width="25px" height="25px"></a>
+        </div>
+    </div>
+<!-- Account -->
+<div class="accountpage">
+    <div class="container">
+        <div class="row">
+            <div class="row-1">
+                <img src="image/bjpr13-removebg-preview.png">
+            </div>
+            <div class="row-1">
+                <div class="form-container">
+                    <div class="form-btn">
+                        <span onclick="Login()">Login</span>
+                        <span onclick="Reg()">Register</span>
+                        <hr id="indicator">
+                    </div>
+                    <form id="login">
+                        <input type="text" placeholder="Username">
+                        <input type="password" placeholder="password">
+                        <button type="submit" class="btn">Login</button>
+                        <a href="">Forgot Password</a>
+                    </form>
+                    <form id="reg">
+                        <input type="text" placeholder="Username">
+                        <input type="email" placeholder="Email">
+                        <input type="password" placeholder="password">
+                        <button type="submit" class="btn">Register</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Account End -->
+<!-- Footer -->
+<div class="footer">
+    <div class="container">
+        <div class="row">
+                <h4>About Us</h4>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi consequuntur incidunt suscipit, minus sequi officia reiciendis eveniet? Quasi repudiandae error qui quaerat omnis ipsa? Accusantium pariatur et delectus tenetur quia!. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet corporis velit est ea tenetur excepturi quo modi, aperiam illo repellat pariatur quam placeat veritatis magnam.</p>
+                <div class="icon">
+                    <i class="fa fa-facebook"></i>
+                    <i class="fa fa-twitter"></i>
+                    <i class="fa fa-instagram"></i>
+                    <i class="fa fa-envelope icon"></i>
+                </div>
+                <p>Copyright by JAV<span>shop</span></p>
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+<!-- js product detail -->
+<script>
+    var productimg = document.getElementById("productimg");
+    var SmallImg = document.getElementsByClassName("small-img");
+
+    SmallImg[0].onclick = function()
+    {
+        productimg.src = SmallImg[0].src;
+    }
+    SmallImg[1].onclick = function()
+    {
+        productimg.src = SmallImg[1].src;
+    }
+    SmallImg[2].onclick = function()
+    {
+        productimg.src = SmallImg[2].src;
+    }
+    SmallImg[3].onclick = function()
+    {
+        productimg.src = SmallImg[3].src;
+    }
+</script>
+<!-- js product detail end -->
+<!-- js loginregister -->
+<script>
+    var login = document.getElementById("login");
+    var reg = document.getElementById("reg");
+    var indicator = document.getElementById("indicator")
+
+        function Reg(){
+            reg.style.transform = "translateX(0px)";
+            login.style.transform = "translateX(0px)";
+            indicator.style.transform = "translateX(100px)";
+        }
+        function Login(){
+            reg.style.transform = "translateX(300px)";
+            login.style.transform = "translateX(300px)";
+            indicator.style.transform = "translateX(0px)";
+        }
+
+</script>
+<!-- js loginregister end -->
+</body>
+</html>
